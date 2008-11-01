@@ -1,0 +1,29 @@
+A Comparison of the Currently Included SHA-3 Entries (2008-11-01)
+-----------------------------------------------------------------
+
+These were done with an Intel Core 2 Quad Q9300 2.50 GHz processor running
+64-bit Arch Linux, using a randomly-generated 1 gigabyte file. The times below
+were collected simply be using the "time" program to time the real, user, and
+system times each hash used. To take advantage of the hardware, I compiled each
+hash with its 64-bit-optimized version. These tests generated 512-bit hashes.
+
+Note that some entries, such as "essence," state that they have not been
+optimized, so their times are likely much slower than they could be. Likewise,
+others, such as MD6, may perform much better when parallelized, which was not
+tested for here.
+
+For comparison, at the end I tested GNU Coreutil's implementation of SHA-2 512.
+I did not include the executable size for that program, because I did not
+compile it.
+
+Entry Name | Executable Size | Real Time | User Time | System Time |
+-----------|-----------------|-----------|-----------|-------------|
+EnRUPT     |          282705 |     6.286 |     5.983 |       0.283 |
+essence    |          187689 |    45.992 |    45.570 |       0.393 |
+maraca     |          157973 |     2.689 |     2.460 |       0.203 |
+md6        |          168036 |    21.530 |    21.229 |       0.297 |
+NaSHA      |          163139 |     0.983 |     0.690 |       0.293 |
+sgail      |          297818 |    23.588 |    23.305 |       0.250 |
+skein      |          185213 |     4.219 |     4.060 |       0.143 |
+-----------|-----------------|-----------|-----------|-------------|
+SHA-2 512  |             N/A |     5.695 |     5.356 |       0.320 |
