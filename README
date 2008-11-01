@@ -13,3 +13,5 @@ in this package.
 The Makefile also has two variables, HASH, SIZE, and TYPE, that specify
 which hash, hash size (in bits,) and optimization to use. See the Makefile for
 more information on these options.
+
+For a list of entries, go to http://131002.net/sha3lounge/ .
