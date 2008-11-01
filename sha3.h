@@ -18,6 +18,8 @@
 #ifndef SHA3_H
 #define SHA3_H
 
+#include <stdio.h>
+
 #if   HASH_ALGO_SHA3_224
 # define HASH_ALGO_SHA3_BLOCK_SIZE 28
 # define sha3_224_stream sha3_stream

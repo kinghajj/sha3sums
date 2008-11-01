@@ -7,10 +7,9 @@ maps commonly named structures and functions into specific ones for the hash.
 Knowing that, I wrote sha3.c and sha3.h, which use the common SHA-3 API, so
 that any SHA-3 entry can be plugged-in.
 
-Before you try this, you must first download and compile a version of GNU
-Coreutils; the version I used is 6.12. In the Makefile, change COREUTILS_DIR
-to point to where you put Coreutils.
+Before compiling, you must first compile GNU coreutils, which is included
+in this package.
 
-The Makefile also has two variables, HASH, HASH_SIZE, and TYPE, that specify
+The Makefile also has two variables, HASH, SIZE, and TYPE, that specify
 which hash, hash size (in bits,) and optimization to use. See the Makefile for
 more information on these options.
