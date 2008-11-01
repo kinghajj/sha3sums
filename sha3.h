@@ -29,7 +29,7 @@
 #elif HASH_ALGO_SHA3_384
 # define HASH_ALGO_SHA3_BLOCK_SIZE 48
 # define sha3_384_stream sha3_stream
-#elif HASH_ALGO_SHA3_256
+#elif HASH_ALGO_SHA3_512
 # define HASH_ALGO_SHA3_BLOCK_SIZE 64
 # define sha3_512_stream sha3_stream
 #else
