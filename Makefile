@@ -16,7 +16,7 @@ COMMON_SRC = md5sum.c sha3.c entries/$(HASH)/$(TYPE)/*.c \
              $(COREUTILS_DIR)lib/libcoreutils.a
 COMMON_FLG = -Wall -O2 -g -DHASH_ALGO_SHA3_$(SIZE)=1 \
              -I$(COREUTILS_DIR)lib -I$(COREUTILS_DIR)src \
-             -Ientries/$(HASH)/$(TYPE)
+             -Ientries/$(HASH)/$(TYPE) -lm
 
 .PHONY: all
 all:
