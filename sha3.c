@@ -20,9 +20,11 @@
 #include "SHA3api_ref.h"
 #include "sha3.h"
 
+#define BUFFER_SIZE 4096
+
 int sha3_stream(FILE *stream, void *resblock)
 {
-	unsigned char buffer[HASH_ALGO_SHA3_BLOCK_SIZE];
+	unsigned char buffer[BUFFER_SIZE];
 	hashState state;
 	HashReturn r;
 	size_t read;
@@ -31,7 +33,7 @@ int sha3_stream(FILE *stream, void *resblock)
 
 	if(r == SUCCESS) {
 		while(r == SUCCESS &&
-		      (read = fread(buffer, 1, HASH_ALGO_SHA3_BLOCK_SIZE, stream)))
+		      (read = fread(buffer, 1, BUFFER_SIZE, stream)))
 			r = Update(&state, buffer, read * 8);
 		Final(&state, resblock);
 	}
